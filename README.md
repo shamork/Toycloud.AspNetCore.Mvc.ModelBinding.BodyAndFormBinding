@@ -26,3 +26,14 @@ public int SaveData([FromBodyAndForm]DataPoco m)
     ;//
 }
 ```
+
+# Thanks 
+
+Thank Matiszak
+
+Write this according to Matiszak's Answer
+https://stackoverflow.com/questions/45495432/asp-net-core-mvc-mixed-route-frombody-model-binding-validation/45496917
+
+# License
+
+MIT
