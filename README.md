@@ -9,9 +9,20 @@ Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding
 Install-Package Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding -Version 1.0.1
 ```
 
+## Enable globally
 ```csharp
 services.AddMvc(options =>
      {
          options.ModelBinderProviders.InsertBodyAndFormBinding();
      })
+```
+
+## Enable For One Parameter
+
+```csharp
+[HttpPost]
+public int SaveData([FromBodyAndForm]DataPoco m)
+{
+    ;//
+}
 ```
