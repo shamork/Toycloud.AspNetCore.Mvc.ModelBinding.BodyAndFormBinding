@@ -6,7 +6,7 @@ Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding
 # Sample
 
 ```powershell
-Install-Package Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding -Version 1.0.1
+Install-Package Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding
 ```
 
 ## Enable globally
