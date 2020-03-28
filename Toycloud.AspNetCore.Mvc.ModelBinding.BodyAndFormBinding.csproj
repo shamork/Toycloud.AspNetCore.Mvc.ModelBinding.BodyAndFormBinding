@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,10 +6,10 @@
 https://stackoverflow.com/questions/45495432/asp-net-core-mvc-mixed-route-frombody-model-binding-validation/45496917</Description>
     <Copyright>MIT</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Toycloud.AspNetCore.Mvc.ModelBinding</PackageId>
+    <PackageId>Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding</PackageId>
     <Authors>shamork</Authors>
     <Company>toycloud</Company>
-    <Product>Toycloud.AspNetCore.Mvc.ModelBinding</Product>
+    <Product>Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding</Product>
   </PropertyGroup>
 
   <ItemGroup>
