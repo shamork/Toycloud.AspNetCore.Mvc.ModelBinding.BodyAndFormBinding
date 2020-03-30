@@ -3,13 +3,13 @@ Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding
 
 ![.NET Core](https://github.com/shamork/Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding/workflows/.NET%20Core/badge.svg?branch=master) ![](https://img.shields.io/badge/license-MIT-green.svg)
 
-# Sample
+# Usage
 
 ```powershell
 Install-Package Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding
 ```
 
-## Configuration
+## 1. Configuration
 ```csharp
 services.AddMvc(options =>
      {
@@ -17,7 +17,7 @@ services.AddMvc(options =>
      })
 ```
 
-## Enable For One Parameter
+## 2. Enable For One Parameter
 
 ```csharp
 [HttpPost]
