@@ -1,19 +1,19 @@
-# Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding
-Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding
+# Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding
+Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding
 
-![.NET Core](https://github.com/shamork/Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding/workflows/.NET%20Core/badge.svg?branch=master) ![](https://img.shields.io/badge/license-MIT-green.svg)
+![.NET Core](https://github.com/shamork/Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding/workflows/.NET%20Core/badge.svg?branch=master) ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 # Sample
 
 ```powershell
-Install-Package Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding
+Install-Package Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding
 ```
 
-## Enable globally
+## Configuration
 ```csharp
 services.AddMvc(options =>
      {
-         options.ModelBinderProviders.InsertBodyAndFormBinding();
+         options.ModelBinderProviders.InsertBodyOrDefaultBinding();
      })
 ```
 
@@ -21,7 +21,7 @@ services.AddMvc(options =>
 
 ```csharp
 [HttpPost]
-public int SaveData([FromBodyAndForm]DataPoco m)
+public int SaveData([FromBodyOrDefault]DataPoco m)
 {
     ;//
 }

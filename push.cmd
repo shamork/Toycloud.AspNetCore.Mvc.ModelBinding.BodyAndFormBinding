@@ -1,3 +1,3 @@
 cd "%~dp0"
-nuget push bin\Release\Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding.1.0.1.nupkg -source nuget.org
+nuget push bin\Release\Toycloud.AspNetCore.Mvc.ModelBinding.BodyOrDefaultBinding.1.0.10.nupkg -source nuget.org
 pause
