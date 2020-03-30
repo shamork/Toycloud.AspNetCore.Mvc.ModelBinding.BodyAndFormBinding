@@ -12,9 +12,9 @@ https://stackoverflow.com/questions/45495432/asp-net-core-mvc-mixed-route-frombo
     <Product>Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding</Product>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
     <PackageProjectUrl>https://github.com/shamork/Toycloud.AspNetCore.Mvc.ModelBinding.BodyAndFormBinding</PackageProjectUrl>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

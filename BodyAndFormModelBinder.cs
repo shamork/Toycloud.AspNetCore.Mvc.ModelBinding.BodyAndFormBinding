@@ -16,7 +16,7 @@ namespace Toycloud.AspNetCore.Mvc.ModelBinding
 
         public Task BindModelAsync(ModelBindingContext bindingContext)
         {
-            return bindingContext.HttpContext.Request.HasFormContentType ? _formBinder.BindModelAsync(bindingContext) : _bodyBinder.BindModelAsync(bindingContext);
+            return bindingContext?.HttpContext?.Request?.HasFormContentType??false ? _formBinder.BindModelAsync(bindingContext) : _bodyBinder.BindModelAsync(bindingContext);
         }
     }
 }
