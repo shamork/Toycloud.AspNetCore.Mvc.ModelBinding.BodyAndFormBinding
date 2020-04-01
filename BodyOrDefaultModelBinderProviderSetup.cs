@@ -7,12 +7,12 @@ namespace Toycloud.AspNetCore.Mvc.ModelBinding
 {
     public static class BodyOrDefaultModelBinderProviderSetup
     {
-        public static void InsertBodyOrDefaultBinding(this IList<IModelBinderProvider> providers, bool replaceDefaultBinderGlobally = false)
+        public static void InsertBodyOrDefaultBinding(this IList<IModelBinderProvider> providers)
         {
             var bodyProvider = providers.Single(provider => provider.GetType() == typeof(BodyModelBinderProvider)) as BodyModelBinderProvider;
             var complexProvider = providers.Single(provider => provider.GetType() == typeof(ComplexTypeModelBinderProvider)) as ComplexTypeModelBinderProvider;
 
-            var bodyOrDefault = new BodyOrDefaultModelBinderProvider(bodyProvider, complexProvider, false);
+            var bodyOrDefault = new BodyOrDefaultModelBinderProvider(bodyProvider, complexProvider);
 
             providers.Insert(0, bodyOrDefault);
         }
