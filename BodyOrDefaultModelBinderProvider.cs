@@ -1,17 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+#if NET5_0_OR_GREATER
+using ComplexDataModelBinderProvider = Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider;
+#else
+using ComplexDataModelBinderProvider = Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider;
+#endif
 
 namespace Toycloud.AspNetCore.Mvc.ModelBinding
 {
     public class BodyOrDefaultModelBinderProvider : IModelBinderProvider
     {
         private BodyModelBinderProvider _bodyModelBinderProvider;
-        private ComplexTypeModelBinderProvider _complexTypeModelBinderProvider;
+        private ComplexDataModelBinderProvider _complexDataModelBinderProvider;
 
-        public BodyOrDefaultModelBinderProvider(BodyModelBinderProvider bodyModelBinderProvider, ComplexTypeModelBinderProvider complexTypeModelBinderProvider)
+        public BodyOrDefaultModelBinderProvider(BodyModelBinderProvider bodyModelBinderProvider, ComplexDataModelBinderProvider complexDataModelBinderProvider)
         {
             _bodyModelBinderProvider = bodyModelBinderProvider;
-            _complexTypeModelBinderProvider = complexTypeModelBinderProvider;
+            _complexDataModelBinderProvider = complexDataModelBinderProvider;
         }
 
         public IModelBinder GetBinder(ModelBinderProviderContext context)
@@ -19,7 +24,7 @@ namespace Toycloud.AspNetCore.Mvc.ModelBinding
             if (context.BindingInfo.BindingSource != null && context.BindingInfo.BindingSource.CanAcceptDataFrom(BodyOrDefaultBindingSource.BodyOrDefault))
             {
                 var bodyBinder = _bodyModelBinderProvider.GetBinder(context);
-                var complexBinder = _complexTypeModelBinderProvider.GetBinder(context);
+                var complexBinder = _complexDataModelBinderProvider.GetBinder(context);
                 return new BodyOrDefaultModelBinder(bodyBinder, complexBinder);
             }
             return null;
